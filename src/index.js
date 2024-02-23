@@ -10,7 +10,7 @@ bot.onText(/\/start/, async (msg) => {
 
   bot.sendMessage(
     chatId,
-    "Welcome to TranslateIN bot, type your text and we can help you translate to Bahasa Indonesia"
+    "Welcome to TranslateIN bot, type your text and we can help you translate to English"
   );
 });
 
