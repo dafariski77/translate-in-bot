@@ -14,11 +14,20 @@ bot.onText(/\/start/, async (msg) => {
   );
 });
 
+bot.onText(/\/help/, async (msg) => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(
+    chatId,
+    "Type your text and we can help you translate to English"
+  );
+});
+
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
   const message = msg.text;
 
-  if (msg.text.startsWith("/start")) {
+  if (msg.text.startsWith("/start") || msg.text.startsWith("/help")) {
     return;
   }
 
